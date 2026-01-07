@@ -23,6 +23,7 @@
 2. Response ← received from Gemini
 3. Full response → stored locally in SQLite
 4. Full response is not sent back to Gemini (only a 200-char snippet during self-correction)
+ 
 **Your complete execution history and results stay on your machine. Only the goal and step prompts are sent to Gemini for processing.**
 
 ---
