@@ -19,6 +19,12 @@
 - **Database Location**: Your execution history is stored in `db/continuum.db` on your local machine. You can delete this file at any time to clear your history.
 - **API Key**: Your Gemini API key is stored locally in `config.py` and is never shared or transmitted anywhere except to Google's API for authentication.
 
+1. Goal → sent to Gemini
+2. Response ← received from Gemini
+3. Full response → stored locally in SQLite
+4. Full response is not sent back to Gemini (only a 200-char snippet during self-correction)
+**Your complete execution history and results stay on your machine. Only the goal and step prompts are sent to Gemini for processing.**
+
 ---
 
 ## 📋 Table of Contents
