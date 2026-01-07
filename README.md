@@ -1,5 +1,13 @@
 # Continuum - Autonomous AI Agent System
 
+> **⚠️ IMPORTANT: Before running the application, you MUST replace the API key in `config.py`**
+> 1. Open `config.py`
+> 2. Replace `"YOUR_GEMINI_API_KEY_HERE"` with your actual Google Gemini API key
+> 3. Get your API key from: https://makersuite.google.com/app/apikey
+> **Never commit your actual API key to version control!**
+
+---
+
 ## 📋 Table of Contents
 - [Project Overview](#project-overview)
 - [Architecture](#architecture)
