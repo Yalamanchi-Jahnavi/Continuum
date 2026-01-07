@@ -530,8 +530,7 @@ GET /goals
 ```
 Continuum/
 ├── agent/
-│   ├── __init__.py
-│   ├── loop.py              # Main orchestrator
+│   ├── loop.py               # Main orchestrator
 │   ├── planner.py            # Step planning
 │   ├── executor.py           # Step execution
 │   ├── evaluator.py          # Output evaluation
@@ -544,13 +543,11 @@ Continuum/
 │   ├── styles.css            # Styling
 │   ├── app.js                # JavaScript logic
 │   ├── serve.py              # Frontend server
-│   └── README.md             # Frontend docs
 ├── app.py                    # FastAPI server
 ├── config.py                 # API configuration
 ├── requirements.txt          # Python dependencies
-├── view_db.py               # Database viewer utility
-├── README.md                # Project readme
-└── Application.md           # This file
+├── view_db.py                # Database viewer utility
+├── README.md                 # Project readme
 ```
 
 ---
