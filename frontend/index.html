@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Continuum - AI Agent Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="logo">
+                    <span class="logo-icon">🤖</span>
+                    Continuum
+                </h1>
+                <p class="tagline">Autonomous AI Agent System</p>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Side by Side Section -->
+            <div class="side-by-side-container">
+                <!-- Input Section -->
+                <section class="input-section">
+                    <div class="card">
+                        <h2 class="section-title">New Goal</h2>
+                        <form id="goalForm" class="goal-form">
+                            <div class="input-group">
+                                <label for="goalInput">Enter your goal</label>
+                                <textarea 
+                                    id="goalInput" 
+                                    placeholder="e.g., Define REST API, Create a todo app, Research best practices..."
+                                    rows="3"
+                                    required
+                                ></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary" id="submitBtn">
+                                <span class="btn-icon">🚀</span>
+                                Start Agent
+                            </button>
+                        </form>
+                    </div>
+                </section>
+
+                <!-- History Section -->
+                <section class="history-section">
+                    <div class="card">
+                        <div class="history-header">
+                            <h2 class="section-title">Previous Results</h2>
+                            <button class="btn btn-secondary" id="refreshHistoryBtn">
+                                <span class="btn-icon">🔄</span>
+                                Refresh
+                            </button>
+                        </div>
+                        <div class="history-list" id="historyList">
+                            <div class="empty-state">No previous results</div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Progress Section -->
+            <section class="progress-section" id="progressSection" style="display: none;">
+                <div class="card">
+                    <h2 class="section-title">Execution Progress</h2>
+                    <div class="progress-info">
+                        <div class="progress-stats">
+                            <div class="stat-item">
+                                <span class="stat-label">Complexity</span>
+                                <span class="stat-value" id="complexityValue">-</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Steps</span>
+                                <span class="stat-value" id="stepsValue">0/0</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Time</span>
+                                <span class="stat-value" id="timeValue">0s</span>
+                            </div>
+                        </div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" id="progressBar">
+                                <div class="progress-fill" id="progressFill"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="steps-list" id="stepsList"></div>
+                </div>
+            </section>
+
+            <!-- Results Section -->
+            <section class="results-section" id="resultsSection" style="display: none;">
+                <div class="card">
+                    <div class="results-header">
+                        <div class="results-header-left">
+                            <h2 class="section-title">Results</h2>
+                            <div class="results-meta">
+                                <div class="meta-item">
+                                    <span class="meta-label">⏱️ Execution Time</span>
+                                    <span class="meta-value" id="executionTime">-</span>
+                                </div>
+                                <div class="meta-item">
+                                    <span class="meta-label">📊 Total API Calls</span>
+                                    <span class="meta-value" id="totalApiCalls">-</span>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="close-btn" id="closeResultsBtn" title="Close Results">
+                            <span class="close-icon">✕</span>
+                        </button>
+                    </div>
+
+                    <!-- API Statistics -->
+                    <div class="api-stats" id="apiStats">
+                        <h3 class="stats-title">📈 API Call Statistics</h3>
+                        <div class="stats-grid">
+                            <div class="stat-card">
+                                <div class="stat-icon">📋</div>
+                                <div class="stat-content">
+                                    <div class="stat-number" id="planningCalls">0</div>
+                                    <div class="stat-name">Planning</div>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon">⚙️</div>
+                                <div class="stat-content">
+                                    <div class="stat-number" id="executionCalls">0</div>
+                                    <div class="stat-name">Execution</div>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon">✅</div>
+                                <div class="stat-content">
+                                    <div class="stat-number" id="evaluationCalls">0</div>
+                                    <div class="stat-name">Evaluation</div>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon">🔄</div>
+                                <div class="stat-content">
+                                    <div class="stat-number" id="correctionCalls">0</div>
+                                    <div class="stat-name">Self-Correction</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Results List -->
+                    <div class="results-list" id="resultsList"></div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
+
