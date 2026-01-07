@@ -1,10 +1,23 @@
 # Continuum - Autonomous AI Agent System
 
 > **⚠️ IMPORTANT: Before running the application, you MUST replace the API key in `config.py`**
+> 
 > 1. Open `config.py`
 > 2. Replace `"YOUR_GEMINI_API_KEY_HERE"` with your actual Google Gemini API key
 > 3. Get your API key from: https://makersuite.google.com/app/apikey
+> 
 > **Never commit your actual API key to version control!**
+
+---
+
+## Privacy & Data Storage
+
+**Important Privacy Information:**
+- **Local Storage**: All your goals, execution results, steps, outputs, and statistics are stored locally in the SQLite database (`db/continuum.db`) on your machine. This data never leaves your local system except when sent to the API.
+- **API Calls**: When you submit a goal, it is sent to Google's Gemini API for processing. Google may log these API calls according to their privacy policy. The actual processing happens on Google's servers.
+- **No External Storage**: Continuum does not send your data to any other external services. The only external communication is with Google's Gemini API for AI processing.
+- **Database Location**: Your execution history is stored in `db/continuum.db` on your local machine. You can delete this file at any time to clear your history.
+- **API Key**: Your Gemini API key is stored locally in `config.py` and is never shared or transmitted anywhere except to Google's API for authentication.
 
 ---
 
@@ -664,5 +677,4 @@ Continuum/
 
 **Last Updated**: 2024
 **Version**: 1.0.0
-
 
